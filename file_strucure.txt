@@ -1,0 +1,31 @@
+dmulti-services/
+├── package.json
+├── .env.local
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx           -> Main layout, Dmulti header
+│   │   ├── page.tsx             -> HOME: Tujha photo vala Form
+│   │   ├── globals.css
+│   │   ├── dashboard/page.tsx   -> Admin: All Jobs, Search, Filter, Stats
+│   │   ├── job/[token]/page.tsx -> Job Detail + History Timeline + Status
+│   │   ├── track/page.tsx       -> Client: Token takun status baghne
+│   │   └── api/
+│   │       ├── jobs/route.ts          -> POST: New Job, GET: All Jobs
+│   │       ├── jobs/[token]/route.ts  -> GET / PATCH: Status update
+│   │       └── 【entity-whatsapp¦canonical_name=WhatsApp】/route.ts      -> 【entity-WhatsApp¦canonical_name=WhatsApp】 link generate
+│   ├── components/
+│   │   ├── JobForm.tsx          -> 7 fields cha form
+│   │   ├── JobCard.tsx          -> Dashboard chi ek card
+│   │   ├── StatusTimeline.tsx   -> Received -> Processing -> Ready -> Complete
+│   │   ├── WhatsAppButton.tsx   -> wa.me button
+│   │   ├── SearchFilter.tsx
+│   │   ├── StatsCards.tsx       -> Total / Processing / Ready / Complete
+│   │   └── SuccessToken.tsx     -> Submit nantar DMS-001 dakhavnara screen
+│   ├── lib/
+│   │   ├── types.ts             -> Job, Status, History types
+│   │   ├── supabase.ts          -> DB connection
+│   │   ├── 【entity-whatsapp¦canonical_name=WhatsApp】.ts          -> 3 Message templates
+│   │   ├── token.ts             -> DMS-001, DMS-002 generate
+│   │   └── utils.ts
+│   ├── store/useJobStore.ts     -> Zustand store
+│   └── data/sampleJobs.ts       -> 3 Demo jobs

@@ -1,0 +1,11 @@
+Build a Next.js 16.4.3 App Router + TypeScript + Tailwind app called Dmulti Services.
+
+PAGE 1 - HOME (/): Top centered blue title "Dmulti Services". White card centered max-w- rounded-2xl shadow. Inside: "Personal Details" bold black centered, "Please fill in your details" grey centered. Form fields stacked, label bold black, input white border grey rounded-lg p-3: Full Name (Enter your full name), Contact Number (Enter contact number), WhatsApp Number (Enter WhatsApp number + checkbox " WhatsApp same as Contact"), Address (Enter your address, textarea), Work Details (Briefly describe your work details, textarea), Received Documents (Enter received documents), Price (Enter price, number). Submit button full width blue #2563EB white text "Submit". On Submit: validate name+contact+ whatsapp, generate token DMS-001, DMS-002..., save to Zustand + localStorage, show Success screen with big Token, name, price, and WhatsApp button linking to https://wa.me/91{whatsapp}?text= encoded "Namaskar {name}, Dmulti Services - Tumcha Job Token {token} aahe. Work: {work}. Price: Rs.{price}. Status: Received."
+
+PAGE 2 - DASHBOARD (/dashboard): Stats Total/Processing/Ready/Complete, Search by name/token/phone, Filter All/Received/Processing/Ready/Complete, Job cards with token, name, phone, work, price, docs, status badge. Click -> /job/[token].
+
+PAGE 3 - JOB DETAIL (/job/[token]): Show all 7 fields, Docs as chips, History Timeline Received->Processing->Ready->Complete with timestamps, Buttons Mark Processing / Mark Ready / Mark Complete, WhatsApp buttons for Ready and Complete.
+
+PAGE 4 - TRACK (/track): Input token, show status timeline only.
+
+Use components: JobForm.tsx, JobCard.tsx, StatusTimeline.tsx, WhatsAppButton.tsx, lib/ whatsapp.ts, lib/token.ts, store/useJobStore.ts. Mobile responsive. No backend, use localStorage + Zustand. Give full file-wise code.[520px]

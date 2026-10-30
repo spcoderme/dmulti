@@ -1,0 +1,3 @@
+export default function SearchFilter({q,setQ,f,setF}:{q:string;setQ:(v:string)=>void;f:string;setF:(v:string)=>void}){
+ return <div style={{display:'flex',gap:10,marginBottom:14}}><input value={q} onChange={e=>setQ(e.target.value)} placeholder='Search name / token / phone...' style={{flex:1,padding:12,borderRadius:10,border:'1px solid #D9D9D9'}}/>
+ <select value={f} onChange={e=>setF(e.target.value)} style={{padding:12,borderRadius:10,border:'1px solid #D9D9D9'}}><option value='All'>All</option><option>Received</option><option>Processing</option><option>Ready</option><option>Complete</option></select></div>}
