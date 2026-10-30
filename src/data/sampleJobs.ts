@@ -1,0 +1,6 @@
+import { Job } from '@/lib/types';
+export const sampleJobs: Job[]=[
+ {id:'1',token:'DMS-001',fullName:'Rahul Patil',contactNumber:'9876543210',whatsappNumber:'9876543210',address:'Pune, Maharashtra',workDetails:'PAN Card Correction',receivedDocuments:'Aadhar, PAN, Photo',price:'500',status:'Processing',history:[{status:'Received',date:new Date().toISOString()},{status:'Processing',date:new Date().toISOString()}],createdAt:new Date().toISOString()},
+ {id:'2',token:'DMS-002',fullName:'Priya Sharma',contactNumber:'9123456780',whatsappNumber:'9123456780',address:'Pimpri, Pune',workDetails:'Passport Form Filling',receivedDocuments:'Aadhar, Photo',price:'1200',status:'Ready',history:[{status:'Received',date:new Date().toISOString()},{status:'Processing',date:new Date().toISOString()},{status:'Ready',date:new Date().toISOString()}],createdAt:new Date().toISOString()},
+ {id:'3',token:'DMS-003',fullName:'Amit Jadhav',contactNumber:'9988776655',whatsappNumber:'9988776655',address:'Hadapsar, Pune',workDetails:'Income Certificate',receivedDocuments:'Aadhar, Ration Card',price:'300',status:'Complete',history:[{status:'Received',date:new Date().toISOString()},{status:'Processing',date:new Date().toISOString()},{status:'Ready',date:new Date().toISOString()},{status:'Complete',date:new Date().toISOString()}],createdAt:new Date().toISOString()},
+];
